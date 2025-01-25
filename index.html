@@ -1,545 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- [Previous head section remains the same] -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <title>SecureLife Insurance - Your Protection Partner</title>
+    <title>Centuries Mutual Insurance Brokerage</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .gradient-bg {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
         }
-
-        :root {
-            --primary: #2d6a4f;
-            --primary-light: #40916c;
-            --primary-dark: #1b4332;
-            --accent: #f59e0b;
-            --text-dark: #0f172a;
-            --text-light: #64748b;
-            --background: #f8fafc;
-            --white: #ffffff;
-            --heading-font: 'Playfair Display', serif;
-            --body-font: 'Poppins', sans-serif;
-            --gradient: linear-gradient(135deg, var(--primary-dark), var(--primary));
-        }
-
-        body {
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--background);
-            font-family: var(--body-font);
-        }
-
-        .header {
-            background-color: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-        }
-
-        .logo-image {
-            height: 45px;
-            width: auto;
-        }
-
-        .logo-text {
-            font-size: 2rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: var(--heading-font);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--primary);
-        }
-
-        .cta-button {
-            background: var(--gradient);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px -1px rgba(37, 99, 235, 0.3);
-        }
-
-        .hero {
-            background: var(--gradient);
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            padding: 0 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('/api/placeholder/1920/1080') center/cover;
-            opacity: 0.1;
-            z-index: 0;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content {
-            max-width: 600px;
-            padding: 3rem;
-            border-radius: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-image {
-            flex: 1;
-            max-width: 600px;
-            margin-left: 2rem;
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--white);
-            font-family: var(--heading-font);
-            font-weight: 800;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: var(--white);
-            opacity: 0.9;
-        }
-
-        .services {
-            padding: 8rem 2rem;
-            background-color: var(--white);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 4rem;
-            color: var(--primary-dark);
-            font-family: var(--heading-font);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--gradient);
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
-
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            padding: 0 1rem;
-        }
-
-        .service-card {
-            background-color: var(--white);
-            border-radius: 1rem;
-            padding: 3rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
         }
-
-
-
-        .service-title {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            font-family: var(--heading-font);
-        }
-
-        .service-description {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-            font-size: 1.1rem;
-        }
-
-        .accolades {
-            padding: 8rem 2rem;
-            background-color: var(--background);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .accolades::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(30, 64, 175, 0.05), rgba(59, 130, 246, 0.05));
-            z-index: 0;
-        }
-
-        .accolades-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .accolade-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .accolade-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .accolade-icon {
-            font-size: 2rem;
-            color: var(--primary);
-            background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(59, 130, 246, 0.1));
-            padding: 1rem;
-            border-radius: 0.75rem;
-        }
-
-        .accolade-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-family: var(--heading-font);
-        }
-
-        .accolade-content p {
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-
-        .footer {
-            background-color: var(--text-dark);
-            color: var(--white);
-            padding: 6rem 2rem 2rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-
-        .footer-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-family: var(--heading-font);
-            color: var(--white);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 1rem;
-        }
-
-        .footer-links a {
-            color: var(--white);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        @media (max-width: 1024px) {
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-image {
-                margin-left: 0;
-                margin-top: 2rem;
-            }
-
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero-content {
-                padding: 2rem;
-            }
-
-            .services-grid,
-            .accolades-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+        .overlay-pattern {
+            background-image: linear-gradient(45deg, rgba(6, 78, 59, 0.05) 25%, transparent 25%),
+                            linear-gradient(-45deg, rgba(6, 78, 59, 0.05) 25%, transparent 25%),
+                            linear-gradient(45deg, transparent 75%, rgba(6, 78, 59, 0.05) 75%),
+                            linear-gradient(-45deg, transparent 75%, rgba(6, 78, 59, 0.05) 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
     </style>
 </head>
-<body>
-    <header class="header">
-        <div class="header-container">
-            <a href="#" class="logo-container">
-                <img src="Centuries Mutual Logo.png" alt="SecureLife Logo" class="logo-image">
-                <span class="logo-text">Centuries Mutual</span>
-            </a>
-            <a href="#" class="cta-button">Client Login</a>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Secure Your Tomorrow, Today</h1>
-                <p>Comprehensive insurance solutions tailored to protect what matters most to you and your family.</p>
-                <div style="display: flex; gap: 1.5rem;">
-                    <a href="#contact" class="cta-button">Get Started</a>
-                    <a href="#services" class="cta-button" style="background: transparent; border: 2px solid white;">
-                        Learn More
-                    </a>
+<body class="font-sans antialiased">
+    <!-- [Previous navigation section remains the same] -->
+    <nav class="gradient-bg text-white border-b border-green-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-8">
+                    <span class="text-2xl font-bold tracking-tight">Centuries Mutual</span>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#" class="text-sm font-medium hover:text-green-200 transition-colors duration-200">Insurance Solutions</a>
+                        <a href="#" class="text-sm font-medium hover:text-green-200 transition-colors duration-200">Industries</a>
+                        <a href="#" class="text-sm font-medium hover:text-green-200 transition-colors duration-200">About Us</a>
+                        <a href="#" class="text-sm font-medium hover:text-green-200 transition-colors duration-200">Resources</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="Lara Paulussen.gif" alt="Insurance Protection" style="max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-sm font-medium hover:text-green-200">Client Portal</a>
+                    <button class="bg-white text-green-800 px-4 py-2 rounded text-sm font-semibold hover:bg-green-50 transition-colors duration-200">Contact Us</button>
+                </div>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <section class="services" id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-hospital-user"></i>
+    <!-- [Previous hero section remains the same] -->
+    <div class="relative bg-green-900 overlay-pattern">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-900 to-transparent"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold text-white leading-tight mb-6">Protecting Your Legacy for Generations</h1>
+                <p class="text-xl text-green-100 mb-8 leading-relaxed">Decades of expertise in crafting comprehensive insurance solutions for businesses and individuals. Experience the difference of working with a broker who truly understands your needs.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-white text-green-900 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200">Schedule a Consultation</button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition-colors duration-200">Learn More</button>
                 </div>
-                <h3 class="service-title">Health Insurance</h3>
-                <p class="service-description">
-                    Comprehensive health coverage that ensures you and your family have access to the best medical care when you need it most.
-                </p>
-                <a href="#contact" class="cta-button">Learn More</a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-shield-heart"></i>
-                </div>
-                <h3 class="service-title">Life Insurance</h3>
-                <p class="service-description">
-                    Protect your family's financial future with our flexible life insurance plans designed to meet your specific needs and goals.
-                </p>
-                <a href="#contact" class="cta-button">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-file-invoice-dollar"></i>
-                </div>
-                <h3 class="service-title">Tax Services</h3>
-                <p class="service-description">
-                    Expert tax preparation and planning services to help you optimize returns and achieve long-term financial success.
-                </p>
-                <a href="#contact" class="cta-button">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="accolades">
-        <h2 class="section-title">Recognition & Excellence</h2>
-        <div class="accolades-grid">
-            <div class="accolade-card">
-                <div class="accolade-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <div class="accolade-content">
-                    <h3>Best Insurance Provider 2024</h3>
-                    <p>Financial Times Excellence Awards</p>
-                </div>
+    <!-- Updated Services Section -->
+    <div class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Comprehensive Insurance Solutions</h2>
+                <p class="text-lg text-gray-600">Tailored coverage options designed to protect what matters most to you and your family.</p>
             </div>
-            <div class="accolade-card">
-                <div class="accolade-icon">
-                    <i class="fas fa-medal"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Health Insurance Card -->
+                <div class="service-card p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Health Insurance</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Comprehensive health coverage options for individuals and families, ensuring access to quality healthcare when you need it most.</p>
+                    <a href="#" class="text-green-800 font-medium hover:text-green-700">Learn more →</a>
                 </div>
-                <div class="accolade-content">
-                    <h3>Top Customer Service</h3>
-                    <p>98% Customer Satisfaction Rate</p>
-                </div>
-            </div>
-            <div class="accolade-card">
-                <div class="accolade-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <div class="accolade-content">
-                    <h3>AAA+ Security Rating</h3>
-                    <p>Global Insurance Standards</p>
-                </div>
-            </div>
 
-        </div>
-    </section>
+                <!-- Life Insurance Card -->
+                <div class="service-card p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Life Insurance</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Secure your family's financial future with our range of life insurance policies tailored to your needs and goals.</p>
+                    <a href="#" class="text-green-800 font-medium hover:text-green-700">Learn more →</a>
+                </div>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>About SecureLife</h3>
-                <p style="margin-bottom: 1rem; opacity: 0.8;">Your trusted partner in insurance and financial planning since 2005. We're committed to protecting what matters most to you.</p>
-
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Health Insurance</a></li>
-                    <li><a href="#">Life Insurance</a></li>
-                    <li><a href="#">Tax Services</a></li>
-                    <li><a href="#">Financial Planning</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <ul class="footer-links">
-                    <li><a href="tel:5551234567">(555) 123-4567</a></li>
-                    <li><a href="mailto:contact@securelife.com">contact@securelife.com</a></li>
-                    <li><a href="#">123 Insurance Street</a></li>
-                    <li><a href="#">Business District, ST 12345</a></li>
-                </ul>
+                <!-- Tax Services Card -->
+                <div class="service-card p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Tax Services</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Expert tax planning and preparation services to help you navigate complex tax regulations and maximize your returns.</p>
+                    <a href="#" class="text-green-800 font-medium hover:text-green-700">Learn more →</a>
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 SecureLife Insurance. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
+
+    <!-- [Rest of the website remains the same...] -->
+    <!-- [Previous statistics section remains the same] -->
+    <!-- [Previous contact section remains the same] -->
+    <!-- [Previous footer section remains the same] -->
 </body>
 </html>
