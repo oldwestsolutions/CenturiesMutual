@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - Centuries Mutual</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-[#F8F9FE]">
+    <!-- Navigation Bar -->
+    <div class="fixed top-0 left-0 right-0 bg-white shadow-sm z-10">
+        <div class="container mx-auto px-4 py-4">
+            <a href="../index.html" class="flex items-center gap-2 text-primary hover:text-primary-dark">
+                <i class="fas fa-arrow-left text-sm"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="bg-primary text-white py-16 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Financial Insights Newsletter</h1>
+                <p class="text-lg opacity-90 mb-6">Stay informed with the latest financial news, market insights, and expert advice</p>
+                <a href="#subscribe" class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-cream transition-colors inline-block">
+                    Subscribe Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Features -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-12">What You'll Receive</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-primary mb-4">
+                        <i class="fas fa-chart-pie text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Market Updates</h3>
+                    <p class="text-gray-600">Weekly analysis of market trends and investment opportunities</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-primary mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Financial Tips</h3>
+                    <p class="text-gray-600">Practical advice for personal and business finance management</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="text-primary mb-4">
+                        <i class="fas fa-newspaper text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Industry News</h3>
+                    <p class="text-gray-600">Latest updates on tax laws, insurance, and financial regulations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Newsletters -->
+    <div class="bg-cream py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-center mb-12">Recent Newsletters</h2>
+                
+                <!-- Newsletter Preview Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Newsletter 1 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="p-6">
+                            <div class="text-sm text-gray-500 mb-2">March 2024</div>
+                            <h3 class="text-xl font-semibold mb-3">Tax Season Updates: What You Need to Know</h3>
+                            <p class="text-gray-600 mb-4">Key changes in tax legislation and how they affect your filing strategy...</p>
+                            <a href="#" class="text-primary hover:text-primary-dark font-semibold">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter 2 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="p-6">
+                            <div class="text-sm text-gray-500 mb-2">February 2024</div>
+                            <h3 class="text-xl font-semibold mb-3">Investment Strategies for 2024</h3>
+                            <p class="text-gray-600 mb-4">Market analysis and recommended investment approaches for the year ahead...</p>
+                            <a href="#" class="text-primary hover:text-primary-dark font-semibold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subscribe Section -->
+    <div id="subscribe" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h2 class="text-2xl font-bold text-center mb-6">Subscribe to Our Newsletter</h2>
+                    <p class="text-gray-600 text-center mb-8">Join thousands of subscribers who receive our weekly financial insights</p>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Enter your full name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Enter your email">
+                        </div>
+
+                        <div>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="form-checkbox text-primary h-5 w-5">
+                                <span class="ml-2 text-sm text-gray-600">I agree to receive marketing emails from Centuries Mutual</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-dark transition-colors">
+                            Subscribe Now
+                        </button>
+                    </form>
+
+                    <p class="text-sm text-gray-500 text-center mt-6">
+                        You can unsubscribe at any time. View our <a href="../pages/privacy-policy.html" class="text-primary hover:text-primary-dark">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="bg-cream py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-center mb-12">What Our Subscribers Say</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-primary mb-4">
+                            <i class="fas fa-quote-left text-2xl"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The weekly market insights have been invaluable for my investment decisions. Clear, concise, and actionable information."</p>
+                        <div class="font-semibold">John D.</div>
+                        <div class="text-sm text-gray-500">Subscriber since 2022</div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-primary mb-4">
+                            <i class="fas fa-quote-left text-2xl"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"I appreciate the timely updates on tax law changes. It helps me stay ahead and make informed decisions for my business."</p>
+                        <div class="font-semibold">Sarah M.</div>
+                        <div class="text-sm text-gray-500">Subscriber since 2023</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

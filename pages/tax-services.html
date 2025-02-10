@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Services - Centuries Mutual</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body class="h-screen overflow-y-auto bg-[#F8F9FE] scrollbar-hide">
+    <!-- Navigation Bar -->
+    <div class="fixed top-0 left-0 right-0 bg-white shadow-sm z-10">
+        <div class="container mx-auto px-4 py-4">
+            <a href="../index.html" class="flex items-center gap-2 text-primary hover:text-primary-dark">
+                <i class="fas fa-arrow-left text-sm"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="bg-primary bg-gradient-to-r from-primary to-primary-dark text-white py-16 mt-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 font-serif">Professional Tax Services</h1>
+                <p class="text-lg opacity-90 mb-6">Expert tax preparation and planning for individuals and businesses</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#contact" class="bg-cream text-primary px-5 py-2 rounded-lg font-semibold hover:bg-white transition-colors">
+                        Get Started
+                    </a>
+                    <a href="#services" class="border border-cream px-5 py-2 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="text-primary mb-4">
+                    <i class="fas fa-calculator text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Tax Preparation</h3>
+                <p class="text-gray-600">Professional preparation of individual and business tax returns with maximum deductions.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="text-primary mb-4">
+                    <i class="fas fa-file-signature text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Tax Planning</h3>
+                <p class="text-gray-600">Strategic tax planning to minimize your tax liability and maximize your wealth.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="text-primary mb-4">
+                    <i class="fas fa-shield-alt text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Audit Support</h3>
+                <p class="text-gray-600">Full representation and support during IRS audits and inquiries.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Detail -->
+    <div id="services" class="bg-cream py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center">Our Tax Services</h2>
+                
+                <!-- Service Cards -->
+                <div class="space-y-6">
+                    <!-- Individual Tax Returns -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="text-primary">
+                                <i class="fas fa-user text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Individual Tax Returns</h3>
+                                <p class="text-gray-600">Comprehensive tax preparation for individuals, including:</p>
+                                <ul class="list-disc list-inside mt-2 text-gray-600">
+                                    <li>Form 1040 and all schedules</li>
+                                    <li>Investment income reporting</li>
+                                    <li>Self-employment income</li>
+                                    <li>Rental property income</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Tax Services -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="text-primary">
+                                <i class="fas fa-building text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Business Tax Services</h3>
+                                <p class="text-gray-600">Complete tax solutions for businesses of all sizes:</p>
+                                <ul class="list-disc list-inside mt-2 text-gray-600">
+                                    <li>Corporate tax returns</li>
+                                    <li>Partnership returns</li>
+                                    <li>LLC tax filings</li>
+                                    <li>Quarterly estimated taxes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+                <p class="text-gray-600 mb-8">Schedule a consultation with our tax experts today.</p>
+                <a href="tel:+18883246642" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors inline-flex items-center gap-2">
+                    <i class="fas fa-phone"></i>
+                    Call (888) 324-6642
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html> 
