@@ -7,6 +7,7 @@
     "@radix-ui/react-slot": "1.0.2",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",
+    "express": "^4.21.2",
     "framer-motion": "10.16.4",
     "lucide-react": "0.330.0",
     "react": "18.2.0",
@@ -16,7 +17,7 @@
     "tailwindcss-animate": "1.0.7"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
